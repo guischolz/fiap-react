@@ -144,8 +144,8 @@ export default class Board extends Component {
     //get task cards array, get rid of moved card, and put a new card
     // in the list where it was dropped
     const cardsArray = parsedLS[parsedDragInfo.fromList].cards
-    const taskCard = cardsArray.find(card => card.timeId === parsedDragInfo.taskId)
-    const indexOfCard = cardsArray.findIndex(card => card.timeId === parsedDragInfo.taskId)
+    const taskCard = cardsArray.find(card => card.timeId == parsedDragInfo.taskId)
+    const indexOfCard = cardsArray.findIndex(card => card.timeId == parsedDragInfo.taskId)
     parsedLS[parsedDragInfo.fromList].cards.splice(indexOfCard, 1)
     parsedLS[listNum].cards.push({...taskCard, listNumber: parseInt(listNum)})
    

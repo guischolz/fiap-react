@@ -21,7 +21,7 @@ export default class List extends React.Component {
       );
     })
       
-    if(this.props.title === 'To Do')
+    if(this.props.title == 'To Do')
     {
     return (
       <div>
